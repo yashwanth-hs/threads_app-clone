@@ -69,4 +69,4 @@ async function Page({ params }: { params: { id: string } }) {
     </section>
   );
 }
-export default Page; 
+export default Page;

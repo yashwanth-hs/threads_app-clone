@@ -38,7 +38,7 @@ async function page({ params }: { params: { id: string } }) {
       <div className='mt-7'>
         <Comment
           threadId={params.id}
-          currentUserImg={userInfo.image}
+          currentUserImg={user.imageUrl}
           currentUserId={JSON.stringify(userInfo._id)}
         />
       </div>
@@ -55,7 +55,7 @@ async function page({ params }: { params: { id: string } }) {
             community={childItem.community}
             createdAt={childItem.createdAt}
             comments={childItem.children}
-            iscomment
+            isComment
           />
         ))}
       </div>
@@ -63,4 +63,4 @@ async function page({ params }: { params: { id: string } }) {
   );
 }
 
-export default page; 
+export default page;
